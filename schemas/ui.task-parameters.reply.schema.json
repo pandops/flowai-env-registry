@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowai.local/schemas/env-registry/ui.task-parameters.reply.schema.json",
+  "title": "env-registry.ui.task-parameters success reply body",
+  "description": "Reply header status 200. Ordinary merged values and logical secret keys of the latest frozen attempt snapshot of the team's task; never secret plaintext, version bytes or secret_id. With no snapshot (queued, unknown, foreign or archived task) attempt is null and both collections are empty. Errors use error.reply.schema.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "attempt", "environment", "secret_keys"],
+  "properties": {
+    "task_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854775807
+    },
+    "attempt": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        }
+      ]
+    },
+    "environment": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}$"
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "secret_keys": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}$"
+      }
+    }
+  }
+}

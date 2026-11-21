@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowai.local/schemas/env-registry/executor.launch-parameters-open.reply.schema.json",
+  "title": "GET /v1/tasks/{task_id}/launch-parameters/open 200 body (HTTP edge, not the broker)",
+  "description": "Merged ordinary values and decrypted secret values of the attempt snapshot; no identifiers, versions or provider metadata. Errors use error.reply.schema.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["values"],
+  "properties": {
+    "values": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}$"
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

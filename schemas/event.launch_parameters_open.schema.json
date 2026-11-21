@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowai.local/schemas/env-registry/event.launch_parameters_open.schema.json",
+  "title": "env-registry.event.launch_parameters_open.pub",
+  "description": "One Executor call of GET /v1/tasks/{task_id}/launch-parameters/open whose claim token verified (opened or refused). Outbox \u2192 ALL_EVENT; NATS headers team (= team_id) and Nats-Msg-Id env-registry-<publisher_seq>. No value, secret, token or key.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "publisher",
+    "publisher_seq",
+    "team_id",
+    "occurred_at",
+    "kind",
+    "task_id",
+    "attempt",
+    "claim_seq",
+    "executor_id",
+    "outcome"
+  ],
+  "properties": {
+    "publisher": {
+      "const": "env-registry"
+    },
+    "publisher_seq": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854775807
+    },
+    "team_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854775807
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+    },
+    "kind": {
+      "const": "launch_parameters_open"
+    },
+    "task_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854775807
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854775807
+    },
+    "claim_seq": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854775807
+    },
+    "executor_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854775807
+    },
+    "flow_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854775807
+    },
+    "outcome": {
+      "enum": [
+        "opened",
+        "claim_not_current",
+        "service_unavailable",
+        "configuration_error"
+      ]
+    },
+    "failure_reason": {
+      "enum": ["missing_required_parameter"]
+    },
+    "missing_parameter": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}$",
+      "description": "Name, never the value, of the missing required parameter."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "configuration_error"
+          }
+        }
+      },
+      "then": {
+        "required": ["failure_reason", "missing_parameter"]
+      }
+    }
+  ]
+}

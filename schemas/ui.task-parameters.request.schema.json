@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowai.local/schemas/env-registry/ui.task-parameters.request.schema.json",
+  "title": "env-registry.ui.task-parameters request",
+  "description": "GET /ui/v1/teams/{team_id}/tasks/{task_id}/launch-parameters (deviation D5). Headers team, operator_id, request_id, team_name. Read only, never audited.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["params"],
+  "properties": {
+    "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["team_id", "task_id"],
+      "properties": {
+        "team_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        },
+        "task_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        }
+      }
+    }
+  }
+}
