@@ -1,0 +1,56 @@
+[
+  {
+    "digest": "sha256:d26e3cea5ff72963de45b933c2eff365d04280cc00fee3c6e76668778f597077",
+    "path": "schemas/defs.schema.json",
+    "repository": "pandops/flowai-flow-registry",
+    "sourceRevision": "c2c5de0399f3d048434f36041800023891b165c7"
+  },
+  {
+    "digest": "sha256:f8e2d07fc5d530e3fe522b952cc8d44dad57ddb84311b8fb32bec520ed3f7dad",
+    "path": "schemas/error.reply.schema.json",
+    "repository": "pandops/flowai-flow-registry",
+    "sourceRevision": "c2c5de0399f3d048434f36041800023891b165c7"
+  },
+  {
+    "digest": "sha256:8469dd88749a8fd1beff67df971057dc1161ed3c3dc8eafc78408d849313f6c7",
+    "path": "schemas/service.flow-owner.request.schema.json",
+    "repository": "pandops/flowai-flow-registry",
+    "sourceRevision": "c2c5de0399f3d048434f36041800023891b165c7"
+  },
+  {
+    "digest": "sha256:697fba1df88e8f5401878a751f6b6ba11ce310f4657c6b9289541a9f08342846",
+    "path": "schemas/service.flow-owner.reply.schema.json",
+    "repository": "pandops/flowai-flow-registry",
+    "sourceRevision": "c2c5de0399f3d048434f36041800023891b165c7"
+  },
+  {
+    "digest": "sha256:5bb6eea9a1419dd7019c4a1998a83e57e71c277c3ecedd2f13f67c6a1023adc6",
+    "path": "schemas/defs.schema.json",
+    "repository": "pandops/flowai-task-manager",
+    "sourceRevision": "1398e8cc5a221dc8c39b5180f2af0a75bd826dd3"
+  },
+  {
+    "digest": "sha256:59fa187d28347ea05a517c81ee312bee4041736fd36d906c5f0234a88f7f0c46",
+    "path": "schemas/error.reply.schema.json",
+    "repository": "pandops/flowai-task-manager",
+    "sourceRevision": "1398e8cc5a221dc8c39b5180f2af0a75bd826dd3"
+  },
+  {
+    "digest": "sha256:9ee06116336c045dce14d761a6d50e3e4b5cc842c3f12c54885e04ddfa36870f",
+    "path": "schemas/event.archived.schema.json",
+    "repository": "pandops/flowai-task-manager",
+    "sourceRevision": "1398e8cc5a221dc8c39b5180f2af0a75bd826dd3"
+  },
+  {
+    "digest": "sha256:55a572ea659534944f51d4d0f1c43a9a9972e1bab31b167918bcf78c0a5f30f3",
+    "path": "schemas/service.claim-current.request.schema.json",
+    "repository": "pandops/flowai-task-manager",
+    "sourceRevision": "1398e8cc5a221dc8c39b5180f2af0a75bd826dd3"
+  },
+  {
+    "digest": "sha256:723dce542a4d56a9bb4dbecc8857b4ca197f91cefd7b3813aa70aa1c17fe858d",
+    "path": "schemas/service.claim-current.reply.schema.json",
+    "repository": "pandops/flowai-task-manager",
+    "sourceRevision": "1398e8cc5a221dc8c39b5180f2af0a75bd826dd3"
+  }
+]
