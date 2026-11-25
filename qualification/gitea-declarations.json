@@ -1,0 +1,213 @@
+{
+  "source_sha": "9cf0d0c5f0769b286119be8f12ff6e4edd1d8d0b",
+  "services": {
+    "env-registry": "svc/env-registry"
+  },
+  "schemas": {
+    "svc/env-registry/schemas/audit.launch_parameter_revisions_listed.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/audit.launch_parameters_created.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/audit.launch_parameters_deleted.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/audit.launch_parameters_read.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/audit.launch_parameters_replaced.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/audit.secret_created.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/audit.secret_replaced.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/audit.secret_revoked.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/audit.secret_versions_listed.schema.json": [
+      "env-registry",
+      "audit"
+    ],
+    "svc/env-registry/schemas/error.reply.schema.json": [
+      "env-registry",
+      "api-gateway",
+      "executor_docker_openhands",
+      "executor_k8s_openhands"
+    ],
+    "svc/env-registry/schemas/event.launch_parameters_open.schema.json": [
+      "env-registry",
+      "journal",
+      "task-manager"
+    ],
+    "svc/env-registry/schemas/executor.launch-parameters-open.reply.schema.json": [
+      "env-registry",
+      "executor_docker_openhands",
+      "executor_k8s_openhands"
+    ],
+    "svc/env-registry/schemas/ui.create-secret.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.create-secret.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.create.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.create.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.delete.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.delete.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.get.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.get.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.list-revisions.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.list-revisions.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.list-secret-versions.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.list-secret-versions.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.list.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.list.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.replace-secret.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.replace-secret.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.replace.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.replace.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.revoke-secret.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.revoke-secret.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.task-parameters.reply.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/env-registry/schemas/ui.task-parameters.request.schema.json": [
+      "env-registry",
+      "api-gateway"
+    ],
+    "svc/flow-registry/schemas/defs.schema.json": [
+      "flow-registry",
+      "admin-panel",
+      "api-gateway",
+      "audit",
+      "env-registry",
+      "journal",
+      "model-registry",
+      "task-manager"
+    ],
+    "svc/flow-registry/schemas/error.reply.schema.json": [
+      "flow-registry",
+      "admin-panel",
+      "api-gateway",
+      "env-registry",
+      "model-registry",
+      "task-manager"
+    ],
+    "svc/flow-registry/schemas/service.flow-owner.reply.schema.json": [
+      "flow-registry",
+      "env-registry"
+    ],
+    "svc/flow-registry/schemas/service.flow-owner.request.schema.json": [
+      "flow-registry",
+      "env-registry"
+    ],
+    "svc/task-manager/schemas/defs.schema.json": [
+      "task-manager",
+      "admin-panel",
+      "api-gateway",
+      "audit",
+      "env-registry",
+      "executor-registry",
+      "executor_docker_openhands",
+      "executor_k8s_openhands",
+      "journal",
+      "model-registry",
+      "source-controller"
+    ],
+    "svc/task-manager/schemas/error.reply.schema.json": [
+      "task-manager",
+      "admin-panel",
+      "api-gateway",
+      "env-registry",
+      "executor-registry",
+      "executor_docker_openhands",
+      "executor_k8s_openhands",
+      "model-registry"
+    ],
+    "svc/task-manager/schemas/event.archived.schema.json": [
+      "task-manager",
+      "env-registry",
+      "journal",
+      "model-registry"
+    ],
+    "svc/task-manager/schemas/service.claim-current.reply.schema.json": [
+      "task-manager",
+      "env-registry",
+      "model-registry"
+    ],
+    "svc/task-manager/schemas/service.claim-current.request.schema.json": [
+      "task-manager",
+      "env-registry",
+      "model-registry"
+    ]
+  }
+}

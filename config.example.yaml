@@ -1,0 +1,29 @@
+# env-registry configuration. The deployment mounts it at
+# /etc/flowai/config.yaml from a Secret: it holds the database password and keys.
+http:
+  listen: ":8080"
+db:
+  host: postgres
+  port: 5432
+  user: env_registry
+  password: change-me
+  schema: env_registry_schema # default
+  sslmode: verify-full
+  ca_file: /run/flowai/stand-ca/ca.pem
+nats:
+  url: tls://nats:4222
+  ca_file: /run/flowai/stand-ca/ca.pem
+  credentials_file: /run/flowai/nats/user.creds
+  inbox_prefix: _INBOX.env-registry
+  request_timeout: 5s
+claim_token:
+  # Base64 Ed25519 public key that verifies Executor claim tokens.
+  verification_key: BASE64_ED25519_PUBLIC_KEY
+# AES-256 data keys (64 hex characters). The highest id encrypts; every listed key decrypts.
+encryption_keys:
+  - id: 1
+    key_hex: "0000000000000000000000000000000000000000000000000000000000000000"
+# HMAC keys for opaque list cursors. The highest id signs.
+cursor_keys:
+  - id: 1
+    key_hex: "0000000000000000000000000000000000000000000000000000000000000000"
